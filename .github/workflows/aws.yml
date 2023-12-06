@@ -31,7 +31,7 @@ on:
     branches: [ "develop" ]
 
 env:
-  AWS_REGION: ap-northeast-2                   # set this to your preferred AWS region, e.g. us-west-1
+  AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: nest           # set this to your Amazon ECR repository name
   ECS_SERVICE: service-nest                 # set this to your Amazon ECS service name
   ECS_CLUSTER: cluster-ldk-nest                 # set this to your Amazon ECS cluster name
@@ -68,8 +68,8 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: ${{ github.sha }}
-#        IMAGE_TAG: latest
+#        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: latest
       run: |
         echo "GitHub SHA: ${{ github.sha }}"
         # Build a docker container and
