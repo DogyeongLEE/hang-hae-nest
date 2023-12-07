@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:887697646689:task-definition/task-nest:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:887697646689:task-definition/task-nest:10",
   "containerDefinitions": [
     {
       "name": "container-nest",
@@ -16,10 +16,8 @@
       ],
       "essential": true,
       "environment": [],
-      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -27,15 +25,14 @@
           "awslogs-group": "/ecs/task-nest",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
+        }
       }
     }
   ],
   "family": "task-nest",
   "executionRoleArn": "arn:aws:iam::887697646689:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 3,
+  "revision": 10,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -78,7 +75,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2023-12-06T15:55:40.261Z",
-  "registeredBy": "arn:aws:iam::887697646689:root",
+  "registeredAt": "2023-12-07T13:08:58.852Z",
+  "registeredBy": "arn:aws:iam::887697646689:user/iam-nest",
   "tags": []
 }
